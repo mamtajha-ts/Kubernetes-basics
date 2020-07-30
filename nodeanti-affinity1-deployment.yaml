@@ -21,10 +21,9 @@ spec:
         - containerPort: 80
       affinity:
         nodeAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - weight: 1
-            preference:
-              matchExpressions:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms: 
+            - matchExpressions:
               - key: disktype
                 operator: NotIn
                 values:
