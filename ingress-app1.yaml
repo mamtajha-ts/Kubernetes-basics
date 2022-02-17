@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: aks-helloworld-one
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: aks-helloworld-one
